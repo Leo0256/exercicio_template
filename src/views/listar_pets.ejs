@@ -1,0 +1,18 @@
+<%-include('base_header')-%>
+<body>
+    <%-include('navbar') -%>
+    <ul>
+        <% for(let i = 0; i < lista_pets.length; i++) { %>
+            <li>
+                <span class="descritor">Nome: </span> <%=lista_pets[i].nome %><br/>
+                <span class="descritor">Idade: </span> <%=lista_pets[i].idade %><br/>
+                <% if(lista_pets[i].raca === 'gato') { %>
+                    <span class="gato">Gato</span>
+                <% } else { %>
+                    <span class="cao">Cão</span>
+                <% } %>
+            </li>
+        <% } %>
+    </ul>
+</body>
+<%- include('base_footer') -%>

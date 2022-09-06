@@ -1,0 +1,22 @@
+<%# A linha abaixo carrega no template o conteúdo total do arquivo header.ejs%>
+<%-include('base_header') -%>
+<body>
+    <%-include('navbar') -%>
+    <ul>
+    <% for(var i=0; i< lista_projetos.length; ++i) { %>        
+        <li> 
+            <span class="descritor">Nome do Projeto:</span> <%=lista_projetos[i].nome %><br/>
+            
+            <span class="descritor">Tecnologia:</span> <%=lista_projetos[i].tecnologia %><br/>
+            
+            <span class="descritor">
+                <a href="<%=lista_projetos[i].github %>">
+                    Github
+                </a>
+            </span>       
+        </li> 
+    <% } %>
+    </ul>
+</body>
+<%# A linha abaixo carrega no template o conteúdo total do arquivo footer.ejs %>
+<%- include('base_footer') -%>
